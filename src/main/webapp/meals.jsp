@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Владимир
-  Date: 7/11/2023
-  Time: 19:03
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="ru">
 <head>
     <title>Meals</title>
@@ -14,5 +8,21 @@
 <h3><a href="index.html">Home</a></h3>
 <hr>
 <h2>Meals</h2>
+<table>
+    <tr>
+        <td>Date</td>
+        <td>Description</td>
+        <td>Calories</td>
+        <td>Excess</td>
+    </tr>
+    <c:forEach var = "meal" items="${mealsTo}">
+        <tr>
+            <td>${meal.DateTime}</td>
+            <td>${meal.Description}</td>
+            <td>${meal.Calories}</td>
+            <td>${meal.Excess}</td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>
