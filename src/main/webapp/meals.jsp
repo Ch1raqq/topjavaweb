@@ -17,10 +17,10 @@
     </tr>
     <c:forEach var = "meal" items="${mealsTo}">
         <tr>
-            <td>${meal.DateTime}</td>
-            <td>${meal.Description}</td>
-            <td>${meal.Calories}</td>
-            <td>${meal.Excess}</td>
+            <td>${meal.dateTime}</td>
+            <td>${meal.description}</td>
+            <td>${meal.calories}</td>
+            <td>${meal.excess}</td>
         </tr>
     </c:forEach>
 </table>
